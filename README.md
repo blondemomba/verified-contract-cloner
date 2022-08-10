@@ -47,15 +47,23 @@ For this demonstration, I picked a random verified ERC20 token called AnyOldERC2
 
 
 ## SecBlinken, please help us help you
-To be clear, the Web3 ecosystem welcomes sensible, effective regulation with open arms. Here are some ideas:
+#### To be clear, the Web3 ecosystem welcomes sensible, effective regulation with open arms. Here are some ideas:
+
 -Imposing regulations that require implementations to include rate limiting (in dollar amounts) to render these tools useless to criminals while preserving netizen privacy
+
 -Any regulatory framework for open-source code that can be misused 
+
 -Any regulatory process for developers whose code gets abused by criminals
+
 -Sanctions on Advanced Persistent Threats, who are the malicious actors committing crimes in these scenarios
+
 -Improving & strengthening advanced on-chain analysis of hacker behaviors and transaction-IP origination (where applicable) to prevent cybercrime
+
 -Literally any other idea/technique that would be more effective than sanctioning a robotic contract used and developed by innocent netizens
 
-Today's announcement provides no productive solution to the cybercrime issue and instead only evidences a severe lack of technical understanding from the US government at its highest levels. 
+Yesterday's announcement provides no productive solution to the cybercrime issue and instead only evidences a severe lack of technical understanding from the US government at its highest levels. 
 
 ## Read this far? 
-Congratulations anon, you now understand smart contract protocols better than the current Secretary of State, who today accused innocent the American + European developers of the aforementioned sanctioned protocol to be DPRK state-sponsored cybercriminals. No public apology has yet been issued for this serious blunder.
+Congratulations anon, you now understand smart contract protocols better than the current Secretary of State (apparently), who by the way accused innocent the American + European developers of the aforementioned sanctioned protocol to be DPRK state-sponsored cybercriminals. No public apology has yet been issued for this serious blunder. Let's do better.
+
+Oh and go vote.
