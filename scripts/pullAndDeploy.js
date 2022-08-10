@@ -84,5 +84,7 @@ const getRepo = async () => {
 }
 
 getRepo().then(() => {
-    exec('npx hardhat run scripts/deploy.js')
+    exec('npx hardhat run scripts/deploy.js') 
+    // add watch / while script | do sleep command to repeat deployment on certain timeout? 
+    // need more rinkeby eth before testing/attempting multiple deployments per second
 })
