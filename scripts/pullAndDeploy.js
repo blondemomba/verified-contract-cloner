@@ -3,6 +3,7 @@ const { ethers } = require('ethers')
 const fs = require('fs/promises')
 require('dotenv').config()
 const { exec, spawn } = require('child_process')
+const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async')
 
 // set whatever target address you might want here.
 // even tho u could, plz dont use a sanctioned address, ok? proof of concept only
@@ -83,28 +84,17 @@ const getRepo = async () => {
     }
 }
 
-const deploy = 'npx hardhat run scripts/deploy.js'
-
-getRepo().then(() => {
-    // add watch / while script | do sleep command to repeat deployment on certain timeout? 
-    // need more rinkeby eth before testing/attempting multiple deployments per second
-
-    // deploy solidity files to your network of choice via config file
-    /*setInterval(deploy(), 200)*/
-    //exec('npx hardhat run scripts/deploy.js')
-    var output = exec(deploy, function(err, stdout, stderr) {
+const cmd = 'npx hardhat run scripts/deploy.js'
+const deploy = async () => {
+    exec(cmd, function(err, stdout, stderr) {
         if (err) {
             console.error(err)
         }
-        console.log(stdout)
-    })
-    // output.stdout.on('data', function(data) {
-    //     console.log(data)
-    // })
-    // output.stderr.on('err', function (err) {
-    //     console.log(err)
-    // })
-    // output.on('exit', function (code) {
-    //     console.log(code)
-    // })
+    console.log(stdout)
+})}
+
+// deploy multiple copies of the solidity code returned by getRepo()
+// set the frequency/number of contracts to be deployed; each promise resolved when block is mined
+getRepo().then(() => {
+    setIntervalAsync(deploy, 1000)
 })

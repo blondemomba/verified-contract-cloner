@@ -9,6 +9,7 @@
     "@openzeppelin/contracts": "^4.7.2",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "set-interval-async": "^3.0.2",
     "solc": "^0.8.16"
   }
 }
