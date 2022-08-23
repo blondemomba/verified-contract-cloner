@@ -1,0 +1,7 @@
+bug: 
+sometimes contract source code solidity versions differ within imports, causing compiler bug
+according to nomiclabs foundation it is not fixable without changing pragmas
+
+solution must be new implementation:
+rewrite this project entirely in solidity instead using bytecode and assembly for deployment
+(would need foundry for this)

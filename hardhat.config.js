@@ -4,6 +4,7 @@ require("@nomicfoundation/hardhat-toolbox");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
+  defaultNetwork: "rinkeby",
   solidity: {
     compilers:  [
       {
@@ -17,6 +18,9 @@ module.exports = {
       },
       {
         version: "0.8.0",
+      },
+      {
+        version: "0.8.9",
       }
     ]
   },

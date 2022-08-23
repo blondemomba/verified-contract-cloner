@@ -2,11 +2,11 @@ const axios = require('axios')
 const { ethers } = require('ethers')
 const fs = require('fs/promises')
 require('dotenv').config()
-const { exec } = require('child_process')
+const { exec, spawn } = require('child_process')
 
 // set whatever target address you might want here.
 // even tho u could, plz dont use a sanctioned address, ok? proof of concept only
-const yourAddress = '0x89E313A640Ba65a3c8C5De723947Ad6a45938FdF' // Found on etherscan
+const yourAddress = '0x52cb629599A656deb6d547ED45603E1b05d5d6DD' // Found on etherscan
 const apiKey = process.env.ETHERSCAN_API
 const infura = process.env.RINKEBY_URL
 const abiUrl = 'https://api-rinkeby.etherscan.io/api?module=contract&action=getabi&address='+yourAddress+'&apikey='+apiKey
@@ -83,8 +83,28 @@ const getRepo = async () => {
     }
 }
 
+const deploy = 'npx hardhat run scripts/deploy.js'
+
 getRepo().then(() => {
-    exec('npx hardhat run scripts/deploy.js') 
     // add watch / while script | do sleep command to repeat deployment on certain timeout? 
     // need more rinkeby eth before testing/attempting multiple deployments per second
+
+    // deploy solidity files to your network of choice via config file
+    /*setInterval(deploy(), 200)*/
+    //exec('npx hardhat run scripts/deploy.js')
+    var output = exec(deploy, function(err, stdout, stderr) {
+        if (err) {
+            console.error(err)
+        }
+        console.log(stdout)
+    })
+    // output.stdout.on('data', function(data) {
+    //     console.log(data)
+    // })
+    // output.stderr.on('err', function (err) {
+    //     console.log(err)
+    // })
+    // output.on('exit', function (code) {
+    //     console.log(code)
+    // })
 })
