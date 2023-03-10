@@ -7,8 +7,8 @@ const { setIntervalAsync, clearIntervalAsync } = require('set-interval-async')
 
 // set whatever target address you might want here.
 // even tho u could, plz dont use a sanctioned address, ok? proof of concept only
-const yourAddress = '0x52cb629599A656deb6d547ED45603E1b05d5d6DD' // Found on etherscan
-const apiKey = process.env.ETHERSCAN_API
+const yourAddress = '0x66a20c2045229734bc569e709c6302b5c45c77ef' // Found on etherscan
+const apiKey = process.env.6V1HEEYFDF5K2GZ6RU5PJMQRYZ79S9Q9I6
 const infura = process.env.RINKEBY_URL
 const abiUrl = 'https://api-rinkeby.etherscan.io/api?module=contract&action=getabi&address='+yourAddress+'&apikey='+apiKey
 const codeUrl = 'https://api-rinkeby.etherscan.io/api?module=contract&action=getsourcecode&address='+yourAddress+'&apikey='+apiKey
